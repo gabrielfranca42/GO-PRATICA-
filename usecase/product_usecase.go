@@ -2,13 +2,13 @@ package usecase
 
 import "go-api/model"
 
-type productUsecase struct {
+type ProductUsecase struct {
 }
 
-func NewProductUseCase() productUsecase{
-	return productUsecase{}
+func NewProductUseCase() ProductUsecase {
+	return ProductUsecase{}
 }
 
-	func(pu *productUsecase) GetProducts() ([]model.Product, error) {
-		return []model.Product{}, nil 
-	}
+func (pu *ProductUsecase) GetProducts() ([]model.Product, error) {
+	return []model.Product{}, nil
+}
