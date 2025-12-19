@@ -13,7 +13,9 @@ type productController struct {
 }
 
 func NewProductController(usecase usecase.ProductUsecase) productController {
-	return productController{}
+	return productController{
+		productUsecase: usecase,
+	}
 }
 
 func (p *productController) GetProducts(ctx *gin.Context) {
